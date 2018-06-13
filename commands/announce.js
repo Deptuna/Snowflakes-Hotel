@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot,message, args) => {
     message.delete();
-    if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("Sorry pal, you can't do that.");
+    if(!message.member.hasPermission("VIEW_AUDIT_LOG")) return message.reply("Sorry pal, you can't do that.");
 
   
     if(!args[0]) return message.reply ("Please say something full to announce!");
