@@ -2,7 +2,7 @@ const config = require('../config.json');
 
 exports.run = (client, message, args, tools) => {
 
-    if (!config.owner.includes(message.author.id))message.react("❌")
+    if(message.author.id !== "335430609860296705")message.react("❌");
     message.react("☑");
     const os = require('os');
     const arch = os.arch()
