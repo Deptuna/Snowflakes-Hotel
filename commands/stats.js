@@ -1,8 +1,8 @@
-
+const config = require("../config.json");
 
 exports.run = (client, message, args, tools) => {
 
-    if(message.author.id !== "335430609860296705")message.react("❌");
+    if (!config.owner.includes(message.author.id)) return;
     const os = require('os');
     const arch = os.arch()
     const used = process.memoryUsage().heapUsed / 1024 / 1024;
