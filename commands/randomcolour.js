@@ -1,6 +1,7 @@
 var randomColor = Math.floor(Math.random() * 16777215).toString(16);
+const Discord = require("discord.js");
 
-exports.run = (Discord, client, message, args) => {
+module.exports.run = async (bot,message, args) => {
 let thumbnail = client.user.avatarURL;
 let colour1 = randomColor
 
