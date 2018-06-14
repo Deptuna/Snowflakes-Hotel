@@ -1,7 +1,6 @@
 const Discord = require("discord.js")
 
 exports.run = (bot, message, args) => {
-               message.delete()
         let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
         if(!kUser) return message.channel.send("❌ | User Not Found!");
         let kReason = args.join(" ").slice(22);
