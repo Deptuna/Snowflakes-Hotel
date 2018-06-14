@@ -7,7 +7,7 @@ module.exports.run = async (bot,message, args) => {
   
     //>ogłoszenie [message here]
         let announceembed = new Discord.RichEmbed()
-        .setTitle(`AN INTERVIEW HAS STARTED!`)
+        .setTitle(`A SHIFT HAS STARTED!`)
         .setThumbnail("https://t4.rbxcdn.com/7f8703c61b1e1d59b840f8c81ec54707")
         .setDescription(`**Hosted by:**${message.author}\n\nThere’s currently a **Shift Session** starting! Come and have a nice refreshing drink and a luxurious room.\n\n:link: JOIN HERE:\nhttps://web.roblox.com/games/1914949051/SUMMER-HOTEL-Snowflakes-Hotel `)
         .setColor("#ff6a00")
