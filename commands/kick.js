@@ -1,26 +1,14 @@
-const Discord = require("discord.js");
+const Discord = require("discord.js")
 
-module.exports.run = async (bot, message, args) => {
-
-    message.delete()
-    let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+exports.run = (bot, message, args) => {
+               message.delete()
+        let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+        if(!kUser) return message.channel.send("❌ | User Not Found!");
+        let kReason = args.join(" ").slice(22);
+        if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(`${message.author}, **🔒 | Sorry, But You Dont Have Access To This Command.**`);
+        if(kUser.hasPermission("KICK_MEMBERS")) return message.channel.send("❌ | Failed To **Kick**, *Need Higher Role*.");
     
-    let kReason = args.join(" ").slice(22);
-    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply(":warning: Error: you don't have permissions to kick! You need KICK_MEMBERS Permission");
-    if(kUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("That person can't be kicked!");
-
-    let kickEmbed = new Discord.RichEmbed()
-    .setTitle(`${bot.user.username} Attention :warning:`)
-    .setColor("#e56b00")
-    .addField("Kicked User", `${kUser}`, true)
-    .addField("Kicked By", `<@${message.author.id}>`, true)
-    .addField("Reason", kReason, true)
-    .setFooter(`${bot.user.username}, Was Currently BETA Mode`);
-
-    let kickChannel = message.guild.channels.find(`name`, "mod-log");
-    if(!kickChannel) return message.channel.send("Can't find mod-log channel.");
-
-    message.guild.member(kUser).kick(kReason);
-    kickChannel.send(kickEmbed);
-    message.channel.send(`${message.author} **You Have Successfuly Kicked** ${kUser}`);
-}
+    
+      
+        return message.channel.send(`✅ | ${kUser} Has Been **Kicked**`);
+};
