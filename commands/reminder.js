@@ -12,10 +12,10 @@
     if(cmd === `${prefix}reminder`) {
 
     let remindertime = args[0];
-    if(!remindertime) return message.channel.send("SPECIFY A TIME AND A NOTE**!**");
+    if(!remindertime) return message.channel.send("Please spesify a time and a note please.");
 
     let notemessage = args.slice(1).join(" ");
-    if(!args[1]) return message.channel.send("PLEASE ENTER A REMINDER NOTE AS WELL**!**");
+    if(!args[1]) return message.channel.send("Please enter a reminder note.");
 
     message.channel.send(`A REMINDER HAS BEEN SET FOR **${ms(ms(remindertime))}!**`);
 
