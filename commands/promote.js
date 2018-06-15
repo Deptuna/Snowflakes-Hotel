@@ -1,6 +1,7 @@
 const roblox = require('noblox.js');
+const Discord = require("discord.js");
 
-exports.run = (Discord, client, message, args) => {
+module.exports.run = async (bot,message, args) => {
 if(!message.member.hasPermission("KICK_MEMBERS")) return message.reply("Only MR/HR can rank people!");
 const groupId = 4129939;
 const maximumRank = 255;
