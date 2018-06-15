@@ -7,5 +7,11 @@ module.exports.run = async (client, message, args) => {
     }
 
     message.react("✅") 
-    message.author.send(`= Guild List =\n\n${client.guilds.map(g => g.name).join("\n")}`, {code:'asciidoc'});
-    }
+    // Lets define our array of guilds
+    const guildArray = client.guilds.map((guild) => {
+    return `${guild.name} : ${guild.id}`
+    })
+  
+    // And send it
+    message.author.send(`= Guild List =\n\`\`\`${guildArray.join("\n")}\`\`\``, {code:'asciidoc'})
+  }
