@@ -1,7 +1,8 @@
+const config = require('../config.json');
 
 exports.run = (client, message, args, tools) => {
 
-    if(message.author.id !== "335430609860296705") return message.react("❌");
+     if (!config.owner.includes(message.author.id))return message.react("❌");
         message.react("☑");
    const guildArray = client.guilds.map((guild) => {
     return `${guild.name} : ${guild.id}`
