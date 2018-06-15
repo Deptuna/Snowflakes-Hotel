@@ -6,7 +6,7 @@ if(!message.member.hasPermission("KICK_MEMBERS")) return message.reply("Only MR/
 const groupId = 4129939;
 const maximumRank = 255;
 let staffc = message.guild.channels.find("name", "promotions") 
-if (!args[0]) return message.channel.send(`Usage: .say [user], [rank]`);
+if (!args[0]) return message.channel.send(`Usage: .promote [user], [rank]`);
 	
 roblox.login({username: process.env.username, password: process.env.password}).then((success) => {
 
