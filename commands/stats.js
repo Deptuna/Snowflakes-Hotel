@@ -3,7 +3,7 @@ const config = require("../config.json");
 exports.run = (client, message, args, tools) => {
 
     if (!config.owner.includes(message.author.id)) {
-        message.react("❌)
+        message.react("❌")
     }
     message.react("✅")
     const os = require('os');
