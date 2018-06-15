@@ -1,7 +1,7 @@
 const roblox = require('noblox.js');
 
-exports.run = (Discord, client, message, args) => {;
-if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("Only MR/HR can rank people!")
+exports.run = (Discord, client, message, args) => {
+if(!message.member.hasPermission("KICK_MEMBERS")) return message.reply("Only MR/HR can rank people!");
 const groupId = 4129939;
 const maximumRank = 255;
 let staffc = message.guild.channels.find("name", "promotions") 
