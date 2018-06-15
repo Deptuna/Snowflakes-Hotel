@@ -16,5 +16,5 @@ module.exports.run = async (bot,message, args) => {
         let announceChannel = message.guild.channels.find(`name`, `sessions`);
         if(!announceChannel) return message.channel.send("Couldn't find sessions channel.");
         
-        announceChannel.send(`${everyone}`,announceembed);
+       announceChannel.send(`<@&456837126428819456>`, announceembed);
 }
