@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 
-exports.execute = (bot, message, args) => {
+module.exports.run = async (bot, message, args) => {
     if (!config.owner.includes(message.author.id)) {
       const embed = new Discord.RichEmbed()
       .setColor(`RANDOM`)
