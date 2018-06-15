@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
   }
   if(args.length < 1){
     const embed = new Discord.RichEmbed()
-    .setColor(cfg.config.wb)
+    .setColor(`RANDOM`)
     .setDescription(`No value specified.\n\nUsage: .leaveguild <guild.id>`)
     message.channel.send({embed});
     return;
