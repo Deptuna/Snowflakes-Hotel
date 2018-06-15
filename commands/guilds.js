@@ -6,7 +6,6 @@ module.exports.run = async (client, message, args) => {
         message.react("❌")
     }
 
-    message.react("✅") 
     // Lets define our array of guilds
     const guildArray = client.guilds.map((guild) => {
     return `${guild.name} : ${guild.id}`
