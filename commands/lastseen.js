@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-exports.execute = async (bot, message, args) => {
+module.exports.run = async (bot,message, args) => {
   try {
     let user;
     if (message.mentions.users.size) {
