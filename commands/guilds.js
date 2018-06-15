@@ -1,7 +1,7 @@
 
 exports.run = (client, message, args, tools) => {
 
-    f(message.author.id !== "335430609860296705") return message.react("❌");
+    if(message.author.id !== "335430609860296705") return message.react("❌");
         message.react("☑");
     const os = require('os');
     const arch = os.arch()
