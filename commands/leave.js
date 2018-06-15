@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const cfg = require('../config.js');
 
 exports.execute = (bot, message, args) => {
     if (!config.owner.includes(message.author.id)) {
@@ -12,7 +11,7 @@ exports.execute = (bot, message, args) => {
   if(args.length < 1){
     const embed = new Discord.RichEmbed()
     .setColor(cfg.config.wb)
-    .setDescription(`No value specified.\n\nUsage: ${cfg.config.PREFIX}leaveguild <guild.id>`)
+    .setDescription(`No value specified.\n\nUsage: .leaveguild <guild.id>`)
     message.channel.send({embed});
     return;
   }
