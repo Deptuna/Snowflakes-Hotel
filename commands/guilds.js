@@ -8,5 +8,5 @@ exports.run = (client, message, args, tools) => {
     })
   
     // And send it
-    message.author.send(`= Guild List =\n\n${guildArray.join("\n")}, {code:'asciidoc'})
+    message.author.send(`= Guild List =\n\n${guildArray.join("\n")},` {code:'asciidoc'})
   }
