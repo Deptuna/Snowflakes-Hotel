@@ -29,9 +29,7 @@ client.on("message", async message => {
   console.log(message.guild.name + ": " + message.channel.name + ": " + message.author.username + ": " + message.content);
 	
 
-    if (message.channel.type === 'dm') {
-        message.channel.send("**We only accept commands in the server). The comamnd prefix is '.' **")
-        return;
+    
   
 
   if(message.content.indexOf(config.prefix) !== 0) return;
