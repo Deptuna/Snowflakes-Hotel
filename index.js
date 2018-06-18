@@ -30,7 +30,7 @@ client.on("message", async message => {
 	
 if (sender.bot) return;
     if (message.channel.type === 'dm') {
-        message.channel.send("**Unfortunately we can only read things in the Koala Cafe server). The comamnd prefix is 'KC' **")
+        message.channel.send("**We only accept commands in the server). The comamnd prefix is '.' **")
         return;
   
 
@@ -49,6 +49,7 @@ if (sender.bot) return;
       console.log(err);
   }
 
-});
+    };
 
+  });
 client.login(process.env.token);
