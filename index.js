@@ -47,7 +47,7 @@ client.on("message", async message => {
       console.log(err);
   }
 
-    };
+    });
 
-  });
+
 client.login(process.env.token);
