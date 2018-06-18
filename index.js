@@ -31,7 +31,7 @@ client.on("message", async message => {
 if (message.channel.type === 'dm') {
         message.channel.send("**We only accept commands in the server). The comamnd prefix is '.' **")
         return;
-  
+};
   
 
   if(message.content.indexOf(config.prefix) !== 0) return;
