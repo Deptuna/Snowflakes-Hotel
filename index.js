@@ -18,6 +18,8 @@ client.on("guildCreate", guild => {
   console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members! `);
 });
 
+    if (message.channel.type != 'dm') return message.channel.send('Please use commands in the server!')
+
 client.on("guildDelete", guild => {
   console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
 });
