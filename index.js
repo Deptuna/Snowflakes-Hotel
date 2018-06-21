@@ -23,6 +23,11 @@ client.on("guildDelete", guild => {
   console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
 });
 
+client.on('guildMemberAdd', member => {
+  const roles = member.guild.roles.find('name', '{-Session Announcements-},{-Poll Announcements-},{-Public Announcements-}');
+  member.addRole (roles);
+});
+
 client.on("message", async message => {
 
   if(message.author.bot) return;
