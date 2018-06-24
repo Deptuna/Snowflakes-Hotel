@@ -9,7 +9,7 @@ module.exports.run = async (bot,message, args) => {
       message.reply("Usage: .announce <what to announce>");
       return;
     }
-    //>ogłoszenie [message here]
+    
         let announceembed = new Discord.RichEmbed()
         .setTitle(`Ranks`)
         .setThumbnail("https://images-ext-1.discordapp.net/external/BSq_yth46LrR7VyXROAbNep2nABZX64wZtycn7wtrtA/https/cdn.discordapp.com/icons/453623751284621342/80833196c339402a966267e914500780.jpg?width=80&height=80")
@@ -28,14 +28,13 @@ module.exports.run = async (bot,message, args) => {
             
         [8] Management
         [9] Senior Management
-        [10] Developer
-        [11] Executive Board
-        [12] Hotel Manager
+        [10] Developers
+        [11] HR Awaiting Training
             
         They have permissions to work, interview and train.
             
         **High Ranks (HRs)**
-            
+        [12] Hotel Managers   
         [13] General Manager
         [14] Chief Operations Officer
         [15] Vice President
