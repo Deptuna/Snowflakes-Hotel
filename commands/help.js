@@ -8,13 +8,20 @@ module.exports.run = async (bot, message, args) => {
       description: `**Check your DMs ${message.author}!**`
   }})
     message.author.send("Here Is my command list!")
-    let botembed = new Discord.RichEmbed()
-    .setTitle("Help information")
+    let modembed = new Discord.RichEmbed()
+    .setTitle("Moderation Commands")
     .setColor("#15f153")
-    .addField("User commands","``8ball``\n``avtar``\n``botinfo``\n``dog``\n``say``\n``flip``\n``createinvite``\n``membercount``\n``serverinfo``\n``ping``\n``rate``\n``ship``\n``roll``\n``dogfact``\n``catfact``\n``should``\n``weather``\n``randomcolor``")
-    .addField("Moderation commands:", "``addrole``\n``purge``\n``removerole``\n``tempmute``\n``announce``\n``training``\n``interview``\n``shift``")
-    .addField("Bot Owner commnds:", "``eval``\n``setactivity``\n``setstatus``\n``shutdown``\n``setavatar``\n``restart``\n``reload``\n``guilds``\n``stats``");
-    return message.author.send(botembed);
+    .addField("Moderation commands:", "``addrole``: Adds the user the desired role.\n``purge``: Deletes the number of messages you choose.\n``removerole``: Removes a user the desired role.\n``mute``: Mutes a user with a time which you choose.\n``announce``: Announces your desired choice.\n``training``: Announces that you are hosting a training session.\n``interview``: Announces that you are hosting an interview session.\n``shift``: Announces that you are hosting a shift session.")
+    let userembed = new Discord.RichEmbed()
+    .setTitle("User Commands")
+    .setColor("#15f153")
+     .addField("User commands","``8ball``\n``avtar``\n``botinfo``\n``dog``\n``say``\n``flip``\n``createinvite``\n``membercount``\n``serverinfo``\n``ping``\n``rate``\n``ship``\n``roll``\n``dogfact``\n``catfact``\n``should``\n``weather``\n``randomcolor``")
+    
+    return message.author.send(userembed);
+    message.author.send(modembed)
+    
+  
+    
   }
  
  
