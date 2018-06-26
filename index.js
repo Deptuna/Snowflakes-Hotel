@@ -24,8 +24,8 @@ client.on("guildDelete", guild => {
 });
 
 client.on('guildMemberAdd', member => {
-  const role = member.guild.roles.find(`{-Public Announcements-}`);
-  member.addRole(role);
+  const roles = member.guild.roles.find(`{-Public Announcements-}`);
+  member.addRole(roles);
 });
 
 client.on("message", async message => {
