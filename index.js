@@ -24,7 +24,7 @@ client.on("guildDelete", guild => {
 });
 
 client.on('guildMemberAdd', member => {
-  const roles = member.guild.roles.find(`{-Public Announcements-}`);
+  const roles = member.guild.roles.find(`<@&456837126428819456>,<@&466268955095465984>,<@&465941709453393921>`);
   member.addRole(roles);
 });
 
