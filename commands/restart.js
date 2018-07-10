@@ -8,7 +8,7 @@ module.exports.run = async (client,message,args) => {
 
 
  message.channel.send('Restarting...')
-     client.destroy()
+    client.destroy()
     .then(() => client.login(process.env.token))
     .then(() => message.channel.send("Restarted!"))
     .then(() => console.log("Restarted"));
