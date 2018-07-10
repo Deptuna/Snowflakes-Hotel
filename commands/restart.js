@@ -3,7 +3,7 @@
 
 module.exports.run = async (client,message,args) => {
 
- const token = config.token;
+ const token = index.token;
 
  if (!config.owner.includes(message.author.id)) return;
 
