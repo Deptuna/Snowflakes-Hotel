@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
     message.react("☑");
     message.channel.send({embed: {
       color: 0x1D82B6,
-      description: `**Check your DMs ${message.author}!**`
+      description: `**There is currently a problem with the command. ${message.author}!**`
   }})
     let Discord = new Discord.RichEmbed()
     .setColor("#15f153") 
