@@ -21,5 +21,5 @@ module.exports.run = async (bot,message, args) => {
         let announceChannel = message.guild.channels.find(`name`, `announcements`);
         if(!announceChannel) return message.channel.send("Couldn't find announce channel.");
         
-        announceChannel.send(`<@&456837126428819456>`, announceembed);
+        announceChannel.send(`@everyone`, announceembed);
 }
