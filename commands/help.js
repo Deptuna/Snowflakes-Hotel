@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
   }})
     let Discord = new Discord.RichEmbed()
     .setColor("#15f153") 
-     .addField("Commands","``interview``\n``training``\n``shift``/n``8ball``\n``avatar``\n``botinfo``\n``dog``\n``say``\n``flip``\n``membercount``\n``serverinfo``\n``ping``\n``rate``\n``ship``\n``roll``\n``dogfact``\n``catfact``\n``should``\n``weather``\n``randomcolor``");
+     .addField("Commands","``interview``\n``training``\n``shift``/n``8ball``\n``avatar``\n``botinfo``\n``dog``\n``say``\n``flip``\n``membercount``\n``serverinfo``\n``ping``\n``rate``\n``ship``\n``roll``\n``dogfact``\n``catfact``\n``should``\n``weather``\n``randomcolor``/n``rps``");
         
     
     return message.author.send(Discord));
