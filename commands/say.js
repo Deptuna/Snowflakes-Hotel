@@ -10,7 +10,7 @@ module.exports.run = async (client, message, args) => {
    
     const embed = new Discord.RichEmbed()
    
-    .setDescription(sayMessage)
+    .setTitle(sayMessage)
     .setColor("RANDOM")
    
     message.channel.send(embed)
