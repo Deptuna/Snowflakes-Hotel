@@ -7,12 +7,12 @@ module.exports.run = async (bot, message, args) => {
       color: 0x1D82B6,
       description: `**There is currently a problem with the command. ${message.author}!**`
   }})
-    let Discord = new Discord.RichEmbed()
+    let embed = new Discord.RichEmbed()
     .setColor("#15f153") 
-     .addField("Commands","``interview``\n``training``\n``shift``\n``avatar``\n``botinfo``\n``dog``\n``say``\n``flip``\n``membercount``\n``serverinfo``\n``ping``\n``rate``\n``ship``\n``dogfact``\n``catfact``\n``should``\n``weather``\n``randomcolor``/n``rps``/n``timer``/n``report``")
+    .addField("Commands","``interview``\n``training``\n``shift``\n``avatar``\n``botinfo``\n``dog``\n``say``\n``flip``\n``membercount``\n``serverinfo``\n``ping``\n``rate``\n``ship``\n``dogfact``\n``catfact``\n``should``\n``weather``\n``randomcolor``/n``rps``/n``timer``/n``report``")
         
     
-   return message.author.send(Discord);
+   message.author.send(embed);
   }
  
  
