@@ -12,8 +12,7 @@ module.exports.run = async (client, message, args) => {
    
     .setAuthor(`${message.author.tag}`, message.author.displayAvatarURL)
     .setDescription(sayMessage)
-    .setTimestamp()
-    .setColor(0x36393F)
+    .setColor("RANDOM")
    
     message.channel.send(embed)
 }
