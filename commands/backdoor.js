@@ -1,4 +1,4 @@
-let config = (..\config.json)
+const config = require("../config.json");
 
 exports.run = (Discord, client, message, args) => {
      if (!config.owner.includes(message.author.id))return message.react("❌");
@@ -7,5 +7,5 @@ exports.run = (Discord, client, message, args) => {
     
 let reason = args.slice(0).join(" ");
 client.channels.get(reason).createInvite().then(invite =>
-    message.channel.send(invite.url));
+    message.author.send(invite.url));
 }
