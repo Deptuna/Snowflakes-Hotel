@@ -1,14 +1,34 @@
-
-let Blacklisted = new Discord.RichEmbed()
-        .setTitle(":no_entry_sign: Blacklisted")
-        .setDescription(`You've been blacklisted from using Zeta, for at least one of the following reasons:\n 1) Misue Of Zeta.\n 2) Stolen Zeta Assets.\n 3) Or any other non-stated reason.`)
-        .setFooter("If you'd like to appeal to be whitelisted please contact,£ndo ¶erl#9595")
-        .setColor("RED")
-        .setThumbnail(message.author.avatarURL);
-      
-      const blacklisted1 = ["495889956523212802"]
-      const blacklisted2 = [""]
-      
-     if(message.content.startsWith(prefix)) {
-         if(message.author.id == blacklisted1, blacklisted2) return message.channel.send(Blacklisted); 
-      }
+const Discord = require("discord.js");
+const database = require("../database.js");
+ exports.run = (client, message, args) => {
+  
+  if (!['335430609860296705'].includes(message.author.id))
+  return message.reply('Comando restrito! Apenas proprietários do bot podem usar!');
+        let block = message.mentions.users.first()
+        
+            ? message.mentions.users.first().id 
+     
+            : args.slice(0).join(' ')
+            ? args.slice(0).join(' ')
+            : null;
+ if (!block) return message.reply('Mencione alguém ou especifique um ID!');
+let user = client.users.has(block) ? client.users.get(block) : null;
+if (user) {
+    database.Lista.findOne({"_id":user.id},function(erro,documento){
+        
+    if (documento) {
+        
+        documento.block = user.id
+        message.reply(`O usuário: \`\`${user.username}\`\` foi colocado na blacklist`)
+        documento.save();
+    } else {
+        var pessoa = new database.Lista({
+            _id: user.id,
+            name: user.username, 
+            block: user.id
+          
+        })
+        pessoa.save()
+message.reply(`O usuário: ${user.username} foi colocado na blacklist`)
+    }
+ })
