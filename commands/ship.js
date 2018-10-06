@@ -8,6 +8,10 @@ let user2 = args[1];
 if(!user2) return message.reply("Please mention a second user!");
 
 let result = Math.floor(Math.random() * 100) + 1;
+    
+if(args[0].toLowerCase() === "Lunita Dr"){
+      message.reply("Obviously They are in love so I will give it a 100% 😙");
+      }    
 
 message.channel.send(`❣ **MATCHMAKING** ❣\n🔻 ${user1} \n🔺 ${user2}`);
 
