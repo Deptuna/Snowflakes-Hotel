@@ -8,7 +8,7 @@ module.exports.run = async (bot,message, args) => {
     
         let announceembed = new Discord.RichEmbed()
         .setTitle(`A SHIFT HAS STARTED!`)
-        .setThumbnail("https://t4.rbxcdn.com/73bb2c70834e24c0e0f4979b96dc205c")
+        .setThumbnail("https://cdn.discordapp.com/attachments/497176168382857236/498066309993594890/Snowflake_Hotels_new.png")
         .setDescription(`**Hosted by:**${message.author}\n\nThere’s currently a **Shift Session** starting! Come and have a nice refreshing drink and a luxurious room.\n\n:link: JOIN HERE:\nhttps://www.roblox.com/games/2199031266/UPDATES-Snowflakes-Hotels-V4`)
         .setColor("#ff6a00")
         .setTimestamp()
