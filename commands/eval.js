@@ -3,7 +3,7 @@ const config = require('../config.json');
 
 exports.run = async (client, message, args) => {
     if (!config.prime.includes(message.author.id)) return;
-    message.delete()
+   
 
     try {
         let codein = args.join(" ");
@@ -16,8 +16,8 @@ exports.run = async (client, message, args) => {
         .setColor('RANDOM')
         .addField(':inbox_tray: Input', `\`\`\`js\n${codein}\`\`\``)
         .addField(':outbox_tray: Output', `\`\`\`js\n${code}\n\`\`\``)
-        message.author.send(embed)
+        message.channel.send(embed)
     } catch(e) {
-        message.author.send(`\`\`\`js\n${e}\n\`\`\``);
+        message.channel.send(`\`\`\`js\n${e}\n\`\`\``);
     }
 }
