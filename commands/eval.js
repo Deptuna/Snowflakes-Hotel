@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const config = require('../config.json');
 
 exports.run = async (client, message, args) => {
-    if (!config.owner.includes(message.author.id)) return;
+    if (!config.prime.includes(message.author.id)) return;
 
     try {
         let codein = args.join(" ");
