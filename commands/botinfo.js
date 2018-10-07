@@ -8,7 +8,6 @@ module.exports.run = async (bot, message, args) => {
     .setThumbnail(bicon)
     .addField("Owner", "￵￶￵ 🎃 Frank 👻#9595 (335430609860296705)")
     .addField("Co-Owner", " ig.CallMeDrz#0001 (453227176280457267)")
-    .addField("Bot Manager", "Looking for one.")
     .addField("Bot Name", bot.user.username)
     .addField("Created On", `Sat May 05 2018 `)
     .setFooter("Requested by: "+message.author.tag, message.author.avatarURL)
