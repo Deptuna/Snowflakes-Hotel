@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
     .setTitle("**Bot Information**")
     .setColor("#15f153")
     .setThumbnail(bicon)
-    .addField("Owner", "￵￶￵ 👿 Frank 👻#9595 (335430609860296705)")
+    .addField("Owner", "￵￶￵ 🎃 Frank 👻#9595 (335430609860296705)")
     .addField("Co-Owner", " ig.CallMeDrz#0001 (453227176280457267)")
     .addField("Bot Manager", "Looking for one.")
     .addField("Bot Name", bot.user.username)
