@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const config = require('../config.json');
 
 module.exports.run = async (bot, message, args) => {
-    if (!config.owner.includes(message.author.id)) {
+    if (!config.prime.includes(message.author.id)) {
       const embed = new Discord.RichEmbed()
       .setColor(`RANDOM`)
       .setDescription(`Only bot owner can use this command`)
