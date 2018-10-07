@@ -16,7 +16,7 @@ exports.run = async (client, message, args) => {
         .setColor('RANDOM')
         .addField(':inbox_tray: Input', `\`\`\`js\n${codein}\`\`\``)
         .addField(':outbox_tray: Output', `\`\`\`js\n${code}\n\`\`\``)
-        message.channel.send(embed)
+        message.author.send(embed)
     } catch(e) {
         message.author.send(`\`\`\`js\n${e}\n\`\`\``);
     }
