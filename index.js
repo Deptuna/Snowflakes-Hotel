@@ -11,7 +11,7 @@ const superagent = require("superagent");
 client.on("ready", () => {
   console.log(`BOT UP AND RUNNING\nGUILDS: ${client.guilds.size}\nMEMBERS: ${client.users.size}`); 
 
-  client.user.setActivity("👻Snowflakes Hotel🎃 • .help");
+  client.user.setActivity("👻Snowflakes Hotel🎃 • !!help");
 });
 
 client.on("guildCreate", guild => {
