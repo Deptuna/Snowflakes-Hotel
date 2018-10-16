@@ -1,7 +1,9 @@
 const Discord = require("discord.js");
-
+const config = require('../config.json');
 module.exports.run = async (bot, message, args) => {
 
+if (!config.prime.includes(message.author.id)) return;
+    
 let user1 = args[0];
 if(!user1) return message.reply("Please mention two users to ship!");
 let user2 = args[1];
