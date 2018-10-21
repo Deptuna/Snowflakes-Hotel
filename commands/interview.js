@@ -9,7 +9,7 @@ module.exports.run = async (bot,message, args) => {
         let announceembed = new Discord.RichEmbed()
         .setTitle(`AN INTERVIEW HAS STARTED!`)
         .setThumbnail("https://cdn.discordapp.com/attachments/497176168382857236/498052032230326283/a7fa0a0d9dfe6cecf1ddd0e394d3c4e0.png")
-        .setDescription(`**Hosted by:**${message.author}\n\nThere’s currently an **Interview Session** starting! If you’re looking to join Snowflakes Hotel, then why not give it a shot at an Interview?\n\nWe will be starting in **15 minutes.**\n\n:link: JOIN HERE:\nhttps://www.roblox.com/games/2200659002/Interview-Center-II-Snowflake-Hotels`)
+        .setDescription(`**Hosted by:**${message.author}\n\nThere’s currently an **Interview Session** starting! If you’re looking to join Snowflakes Hotel, then why not give it a shot at an Interview?\n\nWe will be starting in **15 minutes.**\n\n:link: JOIN HERE:\nhttps://www.roblox.com/games/2502490794/Interview-Centre-I-Snowflake-Hotels`)
         .setColor("#ff6a00")
         .setTimestamp()
 
